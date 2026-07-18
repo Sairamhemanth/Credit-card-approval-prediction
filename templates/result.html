@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ========================================= -->
+<!-- Navbar -->
+<!-- ========================================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-building-columns"></i>
+
+        CreditAI
+
+    </div>
+
+</nav>
+
+<!-- ========================================= -->
+<!-- Result Container -->
+<!-- ========================================= -->
+
+<div class="container">
+
+<div class="title">
+
+<h1>Prediction Result</h1>
+
+<p>Machine Learning Credit Card Approval System</p>
+
+</div>
+
+<!-- ========================================= -->
+<!-- Result Card -->
+<!-- ========================================= -->
+
+<div class="card result-card">
+
+{% if prediction == "Credit Card Approved ✅" %}
+
+<div class="result-icon success">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<h2 class="success-text">{{ prediction }}</h2>
+
+<p class="result-message">
+
+The prediction has been generated after applying <strong>Banking Eligibility Rules</strong> followed by the <strong>Machine Learning Decision Tree Model</strong>.
+
+</p>
+
+{% else %}
+
+<div class="result-icon failure">
+
+<i class="fa-solid fa-circle-xmark"></i>
+
+</div>
+
+<h2 class="failure-text">{{ prediction }}</h2>
+
+<p class="result-message">
+
+The Machine Learning model predicts that this application is less likely to receive credit card approval based on the submitted information.
+
+</p>
+
+{% endif %}
+
+<!-- ========================================= -->
+<!-- Confidence -->
+<!-- ========================================= -->
+
+<div class="confidence-box">
+
+    <h3>Prediction Confidence</h3>
+
+    <div class="progress-bar">
+
+        <div class="progress" style="width: {{ confidence }}%;"></div>
+
+    </div>
+
+    <h2>{{ confidence }}%</h2>
+
+</div>
+
+<!-- ========================================= -->
+<!-- Reasons -->
+<!-- ========================================= -->
+
+<div class="card note-card">
+
+    <h3><i class="fa-solid fa-list-check"></i> Decision Analysis</h3>
+
+    <ul class="reason-list">
+
+        {% for reason in reasons %}
+
+        <li>{{ reason }}</li>
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+
+<!-- ========================================= -->
+<!-- Recommendation -->
+<!-- ========================================= -->
+
+<div class="card note-card">
+
+    <h3><i class="fa-solid fa-lightbulb"></i> Recommendation</h3>
+
+    <p>{{ recommendation }}</p>
+
+</div>
+
+<!-- ========================================= -->
+<!-- Buttons -->
+<!-- ========================================= -->
+
+<div class="button-container">
+
+<a href="/" class="predict-btn">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Predict Another Applicant
+
+</a>
+
+</div>
+
+<!-- ========================================= -->
+<!-- Note -->
+<!-- ========================================= -->
+
+<div class="card note-card">
+
+<h3><i class="fa-solid fa-circle-info"></i> Important Note</h3>
+
+<p>This prediction is generated using a Machine Learning model trained on historical credit data. The prediction is intended for educational purposes and should not be considered as an official banking decision.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- Footer -->
+<!-- ========================================= -->
+
+<footer>
+
+<h3>Credit Card Approval Prediction</h3>
+
+<p>Developed using Flask • Python • Scikit-Learn</p>
+
+</footer>
+
+</body>
+
+</html>

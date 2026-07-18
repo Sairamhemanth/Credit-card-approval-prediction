@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Credit Card Approval Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- Navigation Bar -->
+<!-- ===================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            Credit Card AI
+
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+
+                <a href="#home">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#about">
+
+                    About
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#features">
+
+                    Features
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#team">
+
+                    Team
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <a href="/prediction" class="apply-btn">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Apply for Credit Card
+
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- Hero Section -->
+<!-- ===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+
+            AI Powered Credit Card Approval Prediction
+
+        </h1>
+
+        <p>
+
+            Predict credit card approval instantly using Machine Learning
+            and intelligent banking eligibility rules. Our system analyzes
+            applicant information to provide fast, transparent, and reliable
+            approval decisions.
+
+        </p>
+
+        <a href="/prediction" class="hero-button">
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+            Apply for Credit Card
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ===================================================== -->
+<!-- Project Features -->
+<!-- ===================================================== -->
+
+<section class="section" id="features">
+
+    <h2>
+
+        <i class="fa-solid fa-star"></i>
+
+        Project Features
+
+    </h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>AI Powered Prediction</h3>
+
+            <p>
+
+                Uses a trained Decision Tree Machine Learning model to
+                accurately predict credit card approval decisions.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-scale-balanced"></i>
+
+            <h3>Banking Eligibility Rules</h3>
+
+            <p>
+
+                Combines real-world banking rules with Machine Learning
+                to provide practical and reliable approval decisions.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Instant Decision</h3>
+
+            <p>
+
+                Receive approval results along with confidence,
+                reasons, and recommendations within seconds.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>Decision Tree Model</h3>
+
+            <p>
+
+                A highly interpretable Machine Learning model capable
+                of explaining prediction outcomes clearly.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h3>Transparent Results</h3>
+
+            <p>
+
+                Displays the major factors influencing approval or
+                rejection instead of showing only Yes or No.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <h3>Secure Processing</h3>
+
+            <p>
+
+                Applicant information is used only during prediction
+                and is not permanently stored.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- Team Members -->
+<!-- ===================================================== -->
+
+<section class="section" id="team">
+
+    <h2>
+
+        <i class="fa-solid fa-users"></i>
+
+        Project Team
+
+    </h2>
+
+    <div class="team-box">
+
+        <div class="team-header">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h3>Development Team</h3>
+
+        </div>
+
+        <div class="team-member">
+
+            <span class="member-role">
+
+                Sairamhemanth
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- About Project -->
+<!-- ===================================================== -->
+
+<section class="section" id="about">
+
+    <h2>
+
+        <i class="fa-solid fa-circle-info"></i>
+
+        About This Project
+
+    </h2>
+
+    <div class="summary-card">
+
+        <p>
+
+            This Credit Card Approval Prediction System is an AI-powered web
+            application developed to assist financial institutions in
+            evaluating credit card applications efficiently. The system
+            combines Banking Eligibility Rules with a Decision Tree Machine
+            Learning model to analyze demographic, employment, financial,
+            family, and housing information before generating an approval
+            decision.
+
+        </p>
+
+        <p>
+
+            Along with the prediction result, the application also provides
+            meaningful reasons and recommendations, making the decision
+            transparent and easier to understand.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- Call To Action -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+    <div class="cta-box">
+
+        <h2>
+
+            Ready to Check Your Eligibility?
+
+        </h2>
+
+        <p>
+
+            Complete the application form and let our AI-powered system
+            evaluate your credit card eligibility using intelligent
+            banking rules and Machine Learning.
+
+        </p>
+
+        <a href="/prediction" class="apply-btn-large">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            Apply for Credit Card
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- Footer -->
+<!-- ===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>
+
+            <i class="fa-solid fa-building-columns"></i>
+
+            Credit Card Approval Prediction System
+
+        </h3>
+
+        <p>
+
+            AI Powered Banking Decision Support System using
+            Decision Tree Machine Learning.
+
+        </p>
+
+        <p>
+
+            © 2026 All Rights Reserved
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ===================================================== -->
+<!-- Smooth Scrolling -->
+<!-- ===================================================== -->
+
+<script>
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
